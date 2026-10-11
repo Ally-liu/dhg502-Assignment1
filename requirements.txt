@@ -1,0 +1,11 @@
+# Packages needed to run the analysis (Assignment 1, DHG 502).
+
+qhchina>=0.2.7
+jieba>=0.42.1
+pandas>=2.1
+numpy>=1.26
+
+# opencc: a cross-platform, pip-installable build of the "opencc" module.
+# On Linux/macOS the system package `opencc` (or `pip install opencc`) may be
+# used instead; the import name is the same (`from opencc import OpenCC`).
+opencc-python-reimplemented>=0.1.7
