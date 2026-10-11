@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KWIC · 魏忠贤 &amp; collocates · Mingshi</title>
+<style>
+ :root{
+   --navy:#2B2D42; --brown:#6F4D3E; --tan:#D9C6B2; --cream:#F5F0E1;
+   --paper:#FCFAF4; --line:#E5DCCD; --muted:#8b8173;
+   --grad:linear-gradient(100deg,#2B2D42,#6F4D3E);
+ }
+ *{box-sizing:border-box}
+ body{margin:0;color:#2B2D42;
+      background:linear-gradient(165deg,#F8F4EA,#F1EADB 60%,#F6F1E4);
+      font-family:"Segoe UI",system-ui,-apple-system,"Microsoft YaHei",sans-serif;
+      min-height:100vh;font-size:15px}
+ .wrap{max-width:1160px;margin:0 auto;padding:40px 24px 84px}
+ header{text-align:center;margin-bottom:8px}
+ h1{font-size:1.52rem;font-weight:600;margin:0;color:#2B2D42}
+ h1 .red{color:#6F4D3E} h1 .blue{color:#2B2D42}
+ h1::after{content:"";display:block;width:74px;height:3px;border-radius:2px;
+           margin:14px auto 0;background:var(--grad)}
+ .sub{color:#8b8173;font-size:.84rem;margin:15px 0 0}
+ .layout{display:flex;gap:26px;align-items:flex-start;margin-top:30px}
+ .side{flex:0 0 188px;position:sticky;top:22px}
+ .side-title{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+             color:#a49885;font-weight:600;margin:0 0 10px 4px}
+ .tabs{display:flex;flex-direction:column;gap:9px}
+ .tab{border:1px solid var(--line);background:var(--cream);color:#2B2D42;
+      padding:9px 13px;border-radius:9px;cursor:pointer;font-size:.85rem;
+      font-weight:600;text-align:left;transition:.16s;display:flex;
+      justify-content:space-between;gap:8px}
+ .tab:hover{background:#EFE7D6}
+ .tab.active{background:var(--grad);color:#F5F0E1;border-color:transparent;
+             box-shadow:0 6px 16px rgba(43,45,66,.28)}
+ .tab .c{color:#6F4D3E;font-weight:400}
+ .tab.active .c{color:#E3D5BE}
+ .main{flex:1;min-width:0}
+ .card{background:var(--paper);border:1px solid var(--line);border-radius:12px;
+       overflow:hidden;box-shadow:0 8px 22px rgba(70,60,45,.07)}
+ .bar{height:4px;background:var(--grad)}
+ .ph{padding:6px 18px 22px}
+ .ptitle{text-align:left;color:#2B2D42;font-weight:600;font-size:1.02rem;
+         padding:14px 0 8px;border-bottom:1px solid #EFE7D6;margin-bottom:12px}
+ .ptitle .n{color:#a49885;font-size:.8rem;font-weight:400}
+ .hits{text-align:center}
+ .hit{display:inline-block;text-align:left;max-width:100%;margin:7px 0;padding:10px 15px;
+      background:#FBF8F0;border:1px solid #EDE4D3;border-left:3px solid #C8B79B;
+      border-radius:9px;font-family:ui-monospace,Consolas,"Courier New",monospace;
+      font-size:.86rem;line-height:1.9;color:#4a473f;transition:.15s}
+ .hit:hover{border-left-color:#6F4D3E;background:#F7F1E4}
+ .l{color:#5c584e} .r{color:#5c584e}
+ .node{color:#F5F0E1;background:#6F4D3E;font-weight:600;padding:1px 6px;border-radius:4px}
+ .juan{color:#6F4D3E;font-size:.76rem;background:#EADFCB;border-radius:5px;
+       padding:1px 8px;margin-left:8px;white-space:nowrap}
+ .legend{color:#a49885;font-size:.77rem;margin-top:14px}
+ .legend .node{background:none;color:#6F4D3E;padding:0}
+ .legend .juan{background:none;color:#6F4D3E;margin:0}
+ .empty{color:#a49885;text-align:center;padding:26px}
+ @media(max-width:760px){
+   .layout{flex-direction:column}
+   .side{flex:none;width:100%;position:static}
+   .tabs{flex-direction:row;flex-wrap:wrap}
+ }
+</style></head><body>
+<div class="wrap">
+<header>
+ <h1>Passages linking <span class="red">魏忠贤 / 忠贤</span> with its collocates</h1>
+ <p class="sub">Keywords-in-context (±10 tokens) · Corpus 明史 · citations by 卷 (juan)</p>
+</header>
+<div class="layout">
+ <aside class="side">
+   <div class="side-title">Collocates</div>
+   <div class="tabs" id="tabs"></div>
+ </aside>
+ <main class="main">
+  <div class="card"><div class="bar"></div>
+   <div class="ph">
+    <div class="ptitle" id="ptitle"></div>
+    <div class="hits" id="hits"></div>
+   </div>
+  </div>
+  <p class="legend"><span class="node">brown</span> = node · <span class="juan">tan</span> = 卷 · click a collocate on the left</p>
+ </main>
+</div>
+</div>
+<script>
+const DATA = {"杨涟": [{"left": "户部右侍郎杨涟劾", "node": "忠贤", "right": "三俊亦上疏极论", "juan": "卷二百五十四"}, {"left": "田尔耕许显纯在熹宗时为", "node": "魏忠贤", "right": "义子其党孙云鹤杨寰崔应元佐之拷杨涟左光斗", "juan": "卷九十五"}, {"left": "当此之时魏客乱政应山杨涟首发", "node": "忠贤", "right": "之奸", "juan": "卷二百四十八"}, {"left": "抑知东林有力击", "node": "魏忠贤", "right": "之杨涟首劾崔呈秀之高攀龙乎", "juan": "卷二百六十五"}, {"left": "至六月杨涟上疏劾", "node": "忠贤", "right": "二十四大罪", "juan": "卷二百四十"}, {"left": "于是副都御史杨涟愤甚劾", "node": "忠贤", "right": "二十四大罪", "juan": "卷三百〇五"}, {"left": "六月癸未左副都御史杨涟劾", "node": "魏忠贤", "right": "二十四大罪南北诸臣论忠贤者相继皆不纳", "juan": "卷二十二"}, {"left": "及杨涟劾", "node": "魏忠贤", "right": "二十四大罪忠贤颇惧求援于爌", "juan": "卷二百四十"}, {"left": "杨涟之劾", "node": "忠贤", "right": "二十四罪也忠贤惧属广微为调旨一如忠贤", "juan": "卷三百〇六"}, {"left": "杨涟劾", "node": "魏忠贤", "right": "二十四罪彦亦抗疏劾之自是为忠贤", "juan": "卷二百五十七"}, {"left": "天启五年", "node": "魏忠贤", "right": "以仁度与赵南星杨涟等善勒令致仕寻卒", "juan": "卷二百八十三"}, {"left": "六年", "node": "魏忠贤", "right": "以基命为杨涟同门生落职闲住", "juan": "卷二百五十一"}, {"left": "杨涟劾", "node": "魏忠贤", "right": "伯友亦偕卿胡世赏等抗疏极论", "juan": "卷二百四十二"}, {"left": "杨涟劾", "node": "魏忠贤", "right": "光斗与其谋又与攀龙共发崔呈秀赃私忠贤暨", "juan": "卷二百四十四"}, {"left": "父事", "node": "忠贤", "right": "兴汪文言狱杀杨涟等", "juan": "卷三百〇六"}, {"left": "杨涟等群击", "node": "魏忠贤", "right": "势已不两立", "juan": "卷二百四十三"}, {"left": "未几又逐杨涟左光斗陈于廷朝政大变", "node": "忠贤", "right": "势益张", "juan": "卷二百四十"}, {"left": "杨涟劾", "node": "魏忠贤", "right": "化中亦率同官上疏曰忠贤障日蔽月逞威作福", "juan": "卷二百四十四"}, {"left": "天启中杨涟劾", "node": "魏忠贤", "right": "国弼亦乞速赐处分", "juan": "卷一百七十三"}, {"left": "未几杨涟疏劾", "node": "忠贤", "right": "大中亦率同官上言从古君侧之奸非遂能祸人国也", "juan": "卷二百四十四"}, {"left": "杨涟劾魏忠贤誉卿亦抗疏极论", "node": "忠贤", "right": "大逆不道视汉之朋结赵娆唐之势倾中外宋之典兵", "juan": "卷二百五十八"}, {"left": "杨涟劾", "node": "魏忠贤", "right": "奇瑜亦抗疏力诋", "juan": "卷二百六十"}, {"left": "四年夏杨涟劾", "node": "忠贤", "right": "廷臣多劝向高出疏至有诟者", "juan": "卷二百四十"}, {"left": "杨涟劾", "node": "忠贤", "right": "得严旨应升愤即抗疏继之", "juan": "卷二百四十五"}, {"left": "杨涟劾", "node": "魏忠贤", "right": "得严旨毅中率其属抗疏言", "juan": "卷二百十六"}, {"left": "", "node": "魏忠贤", "right": "恶腾芳与杨涟同乡", "juan": "卷二百十六"}, {"left": "杨涟之劾忠贤二十四罪也", "node": "忠贤", "right": "惧属广微为调旨一如忠贤意", "juan": "卷三百〇六"}, {"left": "未几以推乔允升等代南星忤", "node": "忠贤", "right": "意削侍郎陈于廷及杨涟左光斗籍", "juan": "卷二百四十二"}, {"left": "四年冬", "node": "魏忠贤", "right": "既逐杨涟等即以中旨召复官", "juan": "卷三百〇六"}, {"left": "左佥都御史杨涟等之下狱也大化献策于", "node": "忠贤", "right": "曰彼但坐移宫罪则无赃可指", "juan": "卷三百〇六"}, {"left": "杨涟劾", "node": "忠贤", "right": "疏上帝命体干诵之置疏中切要语不读涟", "juan": "卷三百〇五"}, {"left": "杨涟劾", "node": "忠贤", "right": "疏上昌期适过向高", "juan": "卷二百四十五"}, {"left": "杨涟劾", "node": "忠贤", "right": "疏出怀贤书其上曰宜如韩魏公治任守忠故事", "juan": "卷二百四十五"}, {"left": "臣正与诸生讲为君难一书忽接杨涟劾", "node": "忠贤", "right": "疏合监师生千有余人无不鼓掌称庆", "juan": "卷二百十六"}, {"left": "其时", "node": "忠贤", "right": "益肆廷臣杨涟等交击率被严旨", "juan": "卷二百四十五"}, {"left": "左副都御史杨涟劾魏忠贤二十四大罪南北诸臣论", "node": "忠贤", "right": "者相继皆不纳", "juan": "卷二十二"}, {"left": "朝瑞方擢太仆少卿而大化为", "node": "魏忠贤", "right": "腹心必欲杀朝瑞窜其名汪文言狱中与杨涟等", "juan": "卷二百四十四"}, {"left": "魏忠贤逐杨涟如珂郊饯之", "node": "忠贤", "right": "衔甚", "juan": "卷二百四十九"}, {"left": "杨涟劾", "node": "魏忠贤", "right": "被旨切责", "juan": "卷二百三十五"}, {"left": "既而杨涟劾", "node": "忠贤", "right": "被旨谯让", "juan": "卷二百四十五"}, {"left": "杨涟等群击", "node": "魏忠贤", "right": "被谯责", "juan": "卷二百四十一"}, {"left": "杨涟劾", "node": "魏忠贤", "right": "誉卿亦抗疏极论忠贤大逆不道视汉之朋结赵娆", "juan": "卷二百五十八"}, {"left": "", "node": "魏忠贤", "right": "逐杨涟如珂郊饯之忠贤衔甚", "juan": "卷二百四十九"}, {"left": "会", "node": "忠贤", "right": "逐杨涟赵南星高攀龙等承宗方西巡蓟昌", "juan": "卷二百五十"}, {"left": "杨涟既劾", "node": "魏忠贤", "right": "钦相亦抗疏极论", "juan": "卷二百四十六"}, {"left": "杨涟劾魏忠贤化中亦率同官上疏曰", "node": "忠贤", "right": "障日蔽月逞威作福视大臣如奴隶斥言官", "juan": "卷二百四十四"}, {"left": "及杨涟劾魏忠贤二十四大罪", "node": "忠贤", "right": "颇惧求援于爌", "juan": "卷二百四十"}, {"left": "杨涟将击", "node": "忠贤", "right": "魏大中以告尊素曰除君侧者必有内援", "juan": "卷二百四十五"}], "矫旨": [{"left": "", "node": "忠贤", "right": "乃矫旨仍令显纯五日一追比不下法司诸人始", "juan": "卷二百四十四"}, {"left": "", "node": "忠贤", "right": "以私忿矫旨杀于南苑", "juan": "卷二百四十四"}, {"left": "", "node": "魏忠贤", "right": "党荐之矫旨令吏部擢用至发方养亲不", "juan": "卷二百五十三"}, {"left": "", "node": "魏忠贤", "right": "冒边功矫旨锡上公爵给世券", "juan": "卷二百八十八"}, {"left": "", "node": "忠贤", "right": "即矫旨严追罄赀不足姻族家俱破", "juan": "卷二百五十九"}, {"left": "忠贤指劾顺昌与罪人婚且诬以赃贿", "node": "忠贤", "right": "即矫旨削夺", "juan": "卷二百四十五"}, {"left": "任五年三月给事中薛国观遂劾其党庇徇私", "node": "忠贤", "right": "即矫旨革职", "juan": "卷二百五十七"}, {"left": "维华故与", "node": "忠贤", "right": "同郡交好遂乘机劾安忠贤辄矫旨杀", "juan": "卷三百〇六"}, {"left": "诋叶向高赵南星而荐亓诗教赵兴邦邵辅忠姚宗文等七人", "node": "魏忠贤", "right": "喜矫旨褒纳", "juan": "卷二百五十三"}, {"left": "疏入", "node": "忠贤", "right": "大怒矫旨廷杖一百斥为民", "juan": "卷二百四十五"}, {"left": "", "node": "忠贤", "right": "大怒矫旨斥姜为民", "juan": "卷二百四十五"}, {"left": "", "node": "忠贤", "right": "大怒矫旨黜大中嘉遇并黜九畴而责南星等朋谋", "juan": "卷二百四十三"}, {"left": "", "node": "忠贤", "right": "大怒谓所推仍南星遗党矫旨切责并", "juan": "卷二百五十四"}, {"left": "已而", "node": "忠贤", "right": "大炽矫旨责一燝误用廷弼削官追夺诰命勒令", "juan": "卷二百四十"}, {"left": "熹宗即位", "node": "忠贤", "right": "客氏恶之矫旨赐自尽", "juan": "卷一百十四"}, {"left": "", "node": "忠贤", "right": "得疏大怒矫旨切让尚未有以罪也", "juan": "卷二百四十四"}, {"left": "明日鸿胪报名面恩", "node": "忠贤", "right": "忽矫旨责大中互讦未竣不得赴新任", "juan": "卷二百四十四"}, {"left": "", "node": "忠贤", "right": "怒矫旨镌三秩复除其名", "juan": "卷二百四十五"}, {"left": "", "node": "忠贤", "right": "恶其不附己矫旨勒令自尽", "juan": "卷二百四十四"}, {"left": "疏中又引汉元帝乘船事", "node": "忠贤", "right": "方导帝游幸不悦矫旨切责之", "juan": "卷二百七十四"}, {"left": "甫视事", "node": "魏忠贤", "right": "欲逐南星假廷推谢应祥事矫旨切责", "juan": "卷二百四十二"}, {"left": "以内操谏给事中霍守曲以忠贤乞祠额谏御史刘廷佐以", "node": "忠贤", "right": "滥荫谏给事中沈惟炳以立枷谏忠贤皆矫旨诘责", "juan": "卷三百〇五"}, {"left": "谏御史刘廷佐以忠贤滥荫谏给事中沈惟炳以立枷谏", "node": "忠贤", "right": "皆矫旨诘责", "juan": "卷三百〇五"}, {"left": "釬援笔涂抹即夕挂冠棂星门径归", "node": "忠贤", "right": "矫旨削其籍", "juan": "卷二百五十一"}, {"left": "南京内库颇藏金银珍宝", "node": "魏忠贤", "right": "矫旨取进盗窃一空", "juan": "卷七十九"}, {"left": "未几巡城御史福清林汝翥尝笞内侍曹进傅国兴", "node": "忠贤", "right": "矫旨杖汝翥如燝", "juan": "卷二百四十五"}, {"left": "嘉谟求退", "node": "忠贤", "right": "矫旨许之", "juan": "卷二百四十一"}, {"left": "维华故与忠贤同郡交好遂乘机劾安", "node": "忠贤", "right": "辄矫旨杀之", "juan": "卷三百〇六"}, {"left": "明年御史张讷请毁天下讲坛力诋元标", "node": "忠贤", "right": "遂矫旨削夺", "juan": "卷二百四十三"}, {"left": "", "node": "忠贤", "right": "遂矫旨削起元籍擢童蒙京卿", "juan": "卷二百四十五"}, {"left": "御史王士英劾其为赵南星李三才私党", "node": "忠贤", "right": "遂矫旨并良筹除名永不叙录", "juan": "卷二百九十四"}], "传旨": [{"left": "于是一燝四疏乞归", "node": "忠贤", "right": "从中主之传旨允其去", "juan": "卷二百四十"}, {"left": "", "node": "忠贤", "right": "传旨令与被察徐大化年例外转孙杰俱擢京卿", "juan": "卷三百〇六"}, {"left": "忤", "node": "魏忠贤", "right": "传旨切责复宣谕廷臣再渎奏者罪无赦", "juan": "卷二百五十六"}, {"left": "一日讲筵毕", "node": "忠贤", "right": "传旨廷杖震孟八十", "juan": "卷二百五十一"}, {"left": "", "node": "忠贤", "right": "传旨诘裕中为廷弼姻戚代之报仇廷杖一百", "juan": "卷二百四十五"}, {"left": "应举方奏析而巡盐御史陆世科恶其侵官劾之", "node": "魏忠贤", "right": "传旨诘让御史徐扬先遂希指再劾落职", "juan": "卷二百四十二"}, {"left": "广微欲分其柄嘱", "node": "忠贤", "right": "传旨谕爌同寅协恭而责次辅毋伴食", "juan": "卷二百四十"}, {"left": "", "node": "忠贤", "right": "即日传旨谪震旸", "juan": "卷二百四十六"}, {"left": "", "node": "忠贤", "right": "庇文龙传旨削之令籍阁臣救免", "juan": "卷二百四十五"}, {"left": "忤", "node": "忠贤", "right": "意传旨谯责之", "juan": "卷三百〇六"}, {"left": "会给事中孙杰承", "node": "魏忠贤", "right": "指劾一燝及周嘉谟忠贤遽传旨允放", "juan": "卷二百四十五"}, {"left": "而", "node": "魏忠贤", "right": "方窃柄传旨谓宋室之亡由于讲学将加严", "juan": "卷二百四十三"}, {"left": "", "node": "忠贤", "right": "益不悦传旨切责", "juan": "卷二百四十"}, {"left": "给事中孙杰承魏忠贤指劾一燝及周嘉谟", "node": "忠贤", "right": "遽传旨允放", "juan": "卷二百四十五"}], "其党": [{"left": "", "node": "魏忠贤", "right": "与客氏忌皇后因谋陷国纪使其党刘志选", "juan": "卷三百"}, {"left": "田尔耕许显纯在熹宗时为", "node": "魏忠贤", "right": "义子其党孙云鹤杨寰崔应元佐之拷杨涟左光斗", "juan": "卷九十五"}, {"left": "后", "node": "魏忠贤", "right": "乱政其党御史石三畏追劾之", "juan": "卷二百三十二"}, {"left": "", "node": "魏忠贤", "right": "乱政其党石三畏劾之削籍", "juan": "卷二百三十六"}, {"left": "", "node": "魏忠贤", "right": "乱政其党石三畏追论之遂削夺", "juan": "卷二百三十一"}, {"left": "", "node": "魏忠贤", "right": "亟攻东林其党以弘图尝与南星有隙召起", "juan": "卷二百七十四"}, {"left": "", "node": "忠贤", "right": "使其党重修是非倒置", "juan": "卷二百五十一"}, {"left": "或", "node": "忠贤", "right": "偶忘之其党必追论前事激忠贤怒", "juan": "卷三百〇五"}, {"left": "其党欲藉", "node": "忠贤", "right": "力倾诸正人遂相率归忠贤称义儿且云", "juan": "卷三百〇五"}, {"left": "明年二月", "node": "魏忠贤", "right": "势大张其党杨维垣首翻梃击之案力诋之采坐", "juan": "卷二百四十四"}, {"left": "任五年三月给事中薛国观遂劾其党庇徇私", "node": "忠贤", "right": "即矫旨革职", "juan": "卷二百五十七"}, {"left": "", "node": "忠贤", "right": "又矫诏遣其党太监刘应坤陶文纪用镇", "juan": "卷三百〇五"}, {"left": "会有张匿名榜于厚载门者列", "node": "忠贤", "right": "反状并其党七十余人", "juan": "卷三百〇六"}, {"left": "时绍徽应甲附", "node": "魏忠贤", "right": "得志必欲害于汴属其党石三畏以东林领袖", "juan": "卷二百五十四"}, {"left": "或忠贤偶忘之其党必追论前事激", "node": "忠贤", "right": "怒", "juan": "卷三百〇五"}, {"left": "王素稔", "node": "忠贤", "right": "恶深自儆备其党自危", "juan": "卷三百〇五"}, {"left": "", "node": "忠贤", "right": "愈欲速杀廷弼其党门克新郭兴治石三畏卓迈等遂希指趣", "juan": "卷二百五十九"}, {"left": "其党有导以兴大狱者", "node": "忠贤", "right": "意遂决", "juan": "卷二百四十"}, {"left": "", "node": "忠贤", "right": "故𫘤无他长其党日夜教之客氏为", "juan": "卷三百〇五"}, {"left": "时", "node": "魏忠贤", "right": "方以清君侧疑承宗其党攻世龙者并及承宗", "juan": "卷二百七十"}, {"left": "劾魏忠贤光斗与其谋又与攀龙共发崔呈秀赃私", "node": "忠贤", "right": "暨其党咸怒", "juan": "卷二百四十四"}, {"left": "其党欲藉忠贤力倾诸正人遂相率归", "node": "忠贤", "right": "称义儿且云东林将害翁", "juan": "卷三百〇五"}, {"left": "及", "node": "魏忠贤", "right": "窃政遣其党刘朝胡良辅纪用等四十五人赍", "juan": "卷二百五十"}, {"left": "当是时", "node": "忠贤", "right": "虽败其党犹盛言路新进者群起抨击之", "juan": "卷二百五十一"}, {"left": "", "node": "忠贤", "right": "谓其党曰此老亦邪人但不", "juan": "卷二百四十"}, {"left": "", "node": "魏忠贤", "right": "败其党倪文焕惧诛使使持厚贿求解希孟", "juan": "卷二百十六"}, {"left": "", "node": "魏忠贤", "right": "遣其党刘应坤纪用等出镇", "juan": "卷二百五十九"}, {"left": "后", "node": "忠贤", "right": "遣其党梁梦环巡关欲傅致承宗罪无所得而止", "juan": "卷二百五十"}, {"left": "万历朝素以排击东林为其党所推故", "node": "忠贤", "right": "首用居要地", "juan": "卷三百〇六"}], "生祠": [{"left": "童蒙至右副都御史巡抚延绥母死不持服为", "node": "忠贤", "right": "建生祠", "juan": "卷二百四十三"}, {"left": "崇祯元年二月御史宁光先劾凤翼前抚保定建", "node": "魏忠贤", "right": "生祠", "juan": "卷二百五十七"}, {"left": "五月己巳监生陆万龄请建", "node": "魏忠贤", "right": "生祠于太学旁岁祀如孔子许之", "juan": "卷二十二"}, {"left": "湖广建", "node": "魏忠贤", "right": "生祠忠贤闻上梁文出逢圣手大喜即日诣", "juan": "卷二百六十四"}, {"left": "", "node": "忠贤", "right": "生祠碑文多其手书", "juan": "卷三百〇六"}, {"left": "闰月辛丑巡抚浙江佥都御史潘汝桢请建", "node": "魏忠贤", "right": "生祠许之", "juan": "卷二十二"}, {"left": "开封建", "node": "魏忠贤", "right": "生祠遗书士大夫戒勿预", "juan": "卷二百六十四"}, {"left": "湖广建魏忠贤生祠", "node": "忠贤", "right": "闻上梁文出逢圣手大喜即日诣逢圣", "juan": "卷二百六十四"}], "建祠": [{"left": "梦环建祠祀", "node": "忠贤", "right": "三疏颂功德", "juan": "卷三百〇六"}, {"left": "出督畿辅学政建祠天津河间真定呼", "node": "忠贤", "right": "九千岁", "juan": "卷三百〇六"}, {"left": "且诏建祠蓟州迎", "node": "忠贤", "right": "像五拜三稽首呼九千岁", "juan": "卷三百〇六"}, {"left": "天启末铭诚颂", "node": "魏忠贤", "right": "功德建祠名鸿勋", "juan": "卷三百"}, {"left": "大吏陷", "node": "魏忠贤", "right": "将建祠泾阳振飞执不从", "juan": "卷二百七十六"}, {"left": "中外方争颂", "node": "忠贤", "right": "崇焕不得已亦请建祠终不为所喜", "juan": "卷二百五十九"}, {"left": "浙江巡抚潘汝桢奏请为", "node": "忠贤", "right": "建祠", "juan": "卷三百〇五"}, {"left": "诸生欲为", "node": "魏忠贤", "right": "建祠喻义惩其倡者乃已", "juan": "卷二百十六"}, {"left": "将为", "node": "忠贤", "right": "建祠士容又不奉命", "juan": "卷二百四十八"}, {"left": "元春孙本高官锦衣千户天启中拒", "node": "魏忠贤", "right": "建祠夺职", "juan": "卷二百十三"}, {"left": "督抚以下为", "node": "魏忠贤", "right": "建祠廷栋独不往乞终养归", "juan": "卷二百五十七"}, {"left": "所司将为", "node": "忠贤", "right": "建祠德泳涂毁其募籍乃止", "juan": "卷二百八十三"}], "逆案": [{"left": "崇祯二年命大学士韩爌等定逆案始盖逐", "node": "忠贤", "right": "党东林诸人复进用", "juan": "卷三百〇五"}, {"left": "其后击三才者若邵辅忠徐兆魁辈咸以附", "node": "魏忠贤", "right": "名丽逆案", "juan": "卷二百三十二"}, {"left": "大年举进士历御史加太仆少卿以附", "node": "魏忠贤", "right": "名持逆案至是尽节死", "juan": "卷二百九十一"}, {"left": "初镳世父尚书应秋叔父御史维持以附", "node": "魏忠贤", "right": "并丽逆案镳耻之", "juan": "卷二百七十四"}, {"left": "明年庄烈帝即位文焕伏诛实下吏一鹭吉坐建", "node": "忠贤", "right": "祠纯如坐颂珰并丽逆案", "juan": "卷二百四十五"}, {"left": "庄烈帝嗣位", "node": "忠贤", "right": "被诛广微櫆九畴梦环并丽逆案", "juan": "卷二百四十四"}, {"left": "", "node": "忠贤", "right": "诛入逆案首等论死", "juan": "卷三百〇六"}, {"left": "", "node": "忠贤", "right": "诛杰被劾罢名丽逆案赎徒三年", "juan": "卷三百〇六"}, {"left": "无何", "node": "忠贤", "right": "诛诸祠悉废凡建祠者概入逆案云", "juan": "卷三百〇六"}, {"left": "", "node": "忠贤", "right": "败三人并丽逆案云", "juan": "卷二百四十三"}, {"left": "方", "node": "忠贤", "right": "败时庄烈帝纳廷臣言将定从逆案", "juan": "卷三百〇六"}, {"left": "其后夤缘", "node": "魏忠贤", "right": "起户部侍郎进尚书名丽逆案云", "juan": "卷二百四十九"}, {"left": "时", "node": "魏忠贤", "right": "遗党日望体仁翻逆案攻东林", "juan": "卷三百〇八"}, {"left": "三年春辅臣定逆案者相继去国", "node": "忠贤", "right": "遗党王永光辈日乘机报复震孟抗疏纠之", "juan": "卷二百五十一"}, {"left": "龙锡故主定逆案", "node": "魏忠贤", "right": "遗党王永光高捷袁弘勋史褷辈谋兴大狱", "juan": "卷二百五十九"}], "乱政": [{"left": "值", "node": "魏忠贤", "right": "乱政不谒选而归", "juan": "卷二百七十六"}, {"left": "愤", "node": "忠贤", "right": "乱政作诗书僧扇有阴霾国事非句侦者", "juan": "卷二百四十五"}, {"left": "后", "node": "魏忠贤", "right": "乱政其党御史石三畏追劾之", "juan": "卷二百三十二"}, {"left": "", "node": "魏忠贤", "right": "乱政其党石三畏劾之削籍", "juan": "卷二百三十六"}, {"left": "", "node": "魏忠贤", "right": "乱政其党石三畏追论之遂削夺", "juan": "卷二百三十一"}, {"left": "", "node": "魏忠贤", "right": "乱政大狱纷起珖请告归", "juan": "卷二百五十四"}, {"left": "见", "node": "魏忠贤", "right": "乱政引疾归", "juan": "卷二百十六"}, {"left": "先是", "node": "忠贤", "right": "乱政边饷多缺自严给发如期", "juan": "卷二百五十六"}], "削籍": [{"left": "", "node": "魏忠贤", "right": "乱政其党石三畏劾之削籍", "juan": "卷二百三十六"}, {"left": "北镇抚刘侨不肯杀人媚人", "node": "忠贤", "right": "以不善锻炼遂致削籍", "juan": "卷二百四十四"}, {"left": "天启五年", "node": "魏忠贤", "right": "党倪文焕劾之遂削籍", "juan": "卷二百八十八"}, {"left": "明年", "node": "魏忠贤", "right": "党刘弘先劾图遂削籍", "juan": "卷二百十六"}, {"left": "五年秋", "node": "忠贤", "right": "党周维持复劾嘉谟曲庇王安遂削籍", "juan": "卷二百四十一"}, {"left": "明年秋", "node": "魏忠贤", "right": "党张讷疏诋从吾削籍", "juan": "卷二百四十三"}, {"left": "", "node": "魏忠贤", "right": "党御史卓迈汪若极连章论之遂削籍", "juan": "卷二百四十二"}, {"left": "居数月", "node": "忠贤", "right": "党御史卓迈追劾秉谦保护廷弼遂削籍", "juan": "卷二百四十六"}, {"left": "五年", "node": "魏忠贤", "right": "党门克新劾春倚恃东林父作子述削籍归", "juan": "卷二百三十一"}, {"left": "光宗时乃复起累官刑部右侍郎亦以不附", "node": "忠贤", "right": "削籍", "juan": "卷二百四十二"}, {"left": "王纪忤", "node": "魏忠贤", "right": "削籍学龙言纪亮节弘猷召置廊庙必能表正百僚裁决", "juan": "卷二百七十五"}, {"left": "后又以事忤", "node": "魏忠贤", "right": "削籍归有清执名", "juan": "卷二百四十八"}, {"left": "巡抚周起元忤", "node": "魏忠贤", "right": "削籍顺昌为文送之指斥无所讳", "juan": "卷二百四十五"}, {"left": "", "node": "魏忠贤", "right": "得志为御史王业浩所论遂削籍", "juan": "卷二百三十"}, {"left": "给事中赵兴邦", "node": "忠贤", "right": "私人也以国事为赵南星党劾之削籍", "juan": "卷二百六十"}, {"left": "天启五年冬", "node": "魏忠贤", "right": "罗织清流御史陈睿谟劾其世投门户遂削籍", "juan": "卷二百三十六"}, {"left": "", "node": "忠贤", "right": "诇知先二日假会推事与涟俱削籍", "juan": "卷二百四十四"}, {"left": "", "node": "忠贤", "right": "遂矫诏削籍下抚按追赃", "juan": "卷二百四十五"}, {"left": "", "node": "忠贤", "right": "闻大怒削籍归", "juan": "卷三百〇六"}, {"left": "天启四年秋典试山东坐试录刺", "node": "魏忠贤", "right": "降级已而削籍", "juan": "卷二百四十八"}], "客氏": [{"left": "", "node": "忠贤", "right": "不识字例不当入司礼以客氏故得", "juan": "卷三百〇五"}, {"left": "", "node": "魏忠贤", "right": "与客氏忌皇后因谋陷国纪使其党刘志选", "juan": "卷三百"}, {"left": "客氏遂薄朝而爱", "node": "忠贤", "right": "两人深相结", "juan": "卷三百〇五"}, {"left": "及安怒朝与", "node": "忠贤", "right": "争客氏也勒朝退而忠贤客氏日得志忌安", "juan": "卷三百〇五"}, {"left": "封客氏奉圣夫人荫其子侯国兴弟客光先及", "node": "忠贤", "right": "兄钊俱锦衣千户", "juan": "卷三百〇五"}, {"left": "熹宗嗣位逆珰", "node": "魏忠贤", "right": "内结客氏", "juan": "卷二百四十八"}, {"left": "是时保姆奉圣夫人客氏方擅宠与", "node": "魏忠贤", "right": "及大学士沈纮相表里势焰张甚", "juan": "卷二百四十六"}, {"left": "其秋诏", "node": "忠贤", "right": "及客氏子国兴所荫锦衣官并世袭", "juan": "卷三百〇五"}, {"left": "若", "node": "忠贤", "right": "客氏一日不去恐禁廷左右悉忠贤客氏之人", "juan": "卷二百四十四"}, {"left": "若忠贤客氏一日不去恐禁廷左右悉", "node": "忠贤", "right": "客氏之人非陛下之人陛下真孤立", "juan": "卷二百四十四"}, {"left": "北人读客为楷茄又转音为", "node": "魏忠贤", "right": "客氏之兆", "juan": "卷三十"}, {"left": "陛辞发", "node": "魏忠贤", "right": "客氏之奸", "juan": "卷二百四十八"}, {"left": "", "node": "忠贤", "right": "客氏并有宠", "juan": "卷三百〇五"}, {"left": "熹宗即位", "node": "忠贤", "right": "客氏恶之矫旨赐自尽", "juan": "卷一百十四"}, {"left": "及安怒朝与忠贤争客氏也勒朝退而", "node": "忠贤", "right": "客氏日得志忌安甚", "juan": "卷三百〇五"}, {"left": "", "node": "魏忠贤", "right": "客氏渐窃威福构杀太监王安以次逐吏部尚书", "juan": "卷二百四十"}, {"left": "", "node": "魏忠贤", "right": "客氏用事恶妃持正宫中礼数多被裁损愤郁", "juan": "卷一百十四"}, {"left": "时", "node": "魏忠贤", "right": "客氏离间后妃希得见帝而三俊疏有笃厚三宫", "juan": "卷二百五十四"}, {"left": "言官交章论沈纮纮疑一燝主之与", "node": "忠贤", "right": "客氏等比而𬺈一燝", "juan": "卷二百四十"}, {"left": "陛下贵为天子致三宫列嫔尽寄性命于", "node": "忠贤", "right": "客氏能不寒心", "juan": "卷二百四十四"}, {"left": "", "node": "忠贤", "right": "故𫘤无他长其党日夜教之客氏为", "juan": "卷三百〇五"}, {"left": "天启元年诏赐客氏香火田叙", "node": "忠贤", "right": "治皇祖陵功", "juan": "卷三百〇五"}, {"left": "", "node": "忠贤", "right": "犹豫未忍客氏曰尔我孰若西李而欲", "juan": "卷三百〇五"}, {"left": "文辅初为客氏子侯国兴授读谄附", "node": "忠贤", "right": "由司礼秉笔历掌御马监总督太仓节慎二库", "juan": "卷三百〇五"}, {"left": "中官王体干", "node": "魏忠贤", "right": "等十二人及乳妪客氏假保护功荫锦衣", "juan": "卷二百七十六"}, {"left": "客氏劝帝从其请与", "node": "忠贤", "right": "谋杀之", "juan": "卷三百〇五"}, {"left": "性严正数于帝前言客氏", "node": "魏忠贤", "right": "过失", "juan": "卷一百十四"}]};
+let cur = Object.keys(DATA)[0];
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function render(){
+  const hits = DATA[cur];
+  document.getElementById("ptitle").innerHTML =
+     esc(cur) + ` <span class="n">(${hits.length} passages)</span>`;
+  const box = document.getElementById("hits");
+  if(!hits.length){ box.innerHTML = '<div class="empty">no co-occurring passage within horizon 10</div>'; return; }
+  box.innerHTML = hits.slice(0,40).map(h =>
+     `<div class="hit"><span class="l">${esc(h.left)}</span> `+
+     `<span class="node">${esc(h.node)}</span> `+
+     `<span class="r">${esc(h.right)}</span> `+
+     `<span class="juan">${esc(h.juan)}</span></div>`).join("");
+}
+const tabs = document.getElementById("tabs");
+Object.keys(DATA).forEach(w=>{
+  const b = document.createElement("div");
+  b.className = "tab"+((w===cur)?" active":"");
+  b.innerHTML = esc(w)+' <span class="c">'+DATA[w].length+'</span>';
+  b.onclick = ()=>{ cur=w; document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active")); b.classList.add("active"); render(); };
+  tabs.appendChild(b);
+});
+render();
+</script></body></html>
